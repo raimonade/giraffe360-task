@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@newhighsco/next-plugin-svgr": "^3.0.50",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "styled-components": "^5.3.5",
+    "uuid": "^8.3.2",
+    "zustand": "3.6.5"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
