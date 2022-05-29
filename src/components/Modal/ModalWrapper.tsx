@@ -6,6 +6,7 @@ import Modal from './Modal';
 
 const Background = styled(motion.div)`
 	position: absolute;
+	z-index: 20;
 	top: 0;
 	left: 0;
 	height: 100vh;

@@ -113,27 +113,8 @@ const ModalHeader = styled.div<{ orient: string }>`
 export const Title = ({ title = '', subtitle = '', orient = 'left' }) => {
 	return (
 		<ModalHeader orient={orient}>
-			<AnimatePresence>
-				<motion.div
-					exit={{ opacity: 0, y: subtitle ? '-50%' : '50%', position: 'absolute' }}
-					animate={{
-						opacity: 1,
-						y: '0%',
-						position: 'relative',
-						transition: { delay: 0.05 },
-					}}
-					initial={{ opacity: 0, y: subtitle ? '-50%' : '50%', position: 'absolute' }}
-					key={title?.toString() + subtitle?.toString()}
-					transition={{ duration: 0.1 }}
-					layout
-					style={{
-						width: '100%',
-					}}
-				>
-					{subtitle && <span>{subtitle}</span>}
-					{title && <h3>{title}</h3>}
-				</motion.div>
-			</AnimatePresence>
+			{subtitle && <span>{subtitle}</span>}
+			{title && <h3>{title}</h3>}
 		</ModalHeader>
 	);
 };
