@@ -19,7 +19,7 @@ const SuccessIndicator = () => {
 						rotate: -25,
 					}}
 					transition={{
-						duration: 0.3,
+						duration: 0.2,
 						type: 'spring',
 						stiffness: 200,
 						damping: 10,

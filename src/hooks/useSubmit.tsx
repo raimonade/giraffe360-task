@@ -71,11 +71,11 @@ export const useSubmit = ({ onSubmit = null }) => {
 				});
 				setTimeout(() => {
 					onSubmit();
-				}, 1000);
+				}, 800);
 				setTimeout(() => {
 					// clear success state
 					setState({ ...state, error: null, success: false });
-				}, 1350);
+				}, 1200);
 			} catch (e) {
 				setState({
 					...state,

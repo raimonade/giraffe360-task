@@ -45,7 +45,7 @@ const ModalContainer = ({ Component, props, hideModal }) => {
 					animate={{ opacity: 1, transition: { duration: 0.15, ease: 'easeInOut' } }}
 					exit={{
 						opacity: 0,
-						transition: { delay: 0.2, duration: 0.15, ease: 'easeInOut' },
+						transition: { delay: 0.15, duration: 0.15, ease: 'easeInOut' },
 					}}
 				>
 					<Container>
@@ -56,7 +56,7 @@ const ModalContainer = ({ Component, props, hideModal }) => {
 								marginTop: 0,
 								transition: { delay: 0.15 },
 							}}
-							exit={{ opacity: 0, marginTop: -30, transition: { delay: 0.15 } }}
+							exit={{ opacity: 0, marginTop: -50 }}
 							transition={{
 								stiffness: 500,
 							}}

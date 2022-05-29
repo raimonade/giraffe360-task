@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import NetworkItem from './NetworkItem';
 import exampleWifis from '@/models/exampleWifis';
@@ -43,37 +43,43 @@ const Heading = styled.h3`
 
 const NetworkList = () => {
 	const { savedNetworks, connected } = usePersistentStore();
+
+	const filteredSavedNetworks = useMemo(() => {
+		return savedNetworks.filter((network) => network.ssid !== connected?.ssid);
+	}, [savedNetworks, connected]);
+
+	// write a usememo function of the above code
+	const filteredExampleWifis = useMemo(() => {
+		return exampleWifis.filter((wifi) => {
+			const matchingNetwork = savedNetworks.find((network) => network.ssid === wifi.ssid);
+			if (!matchingNetwork) {
+				return wifi;
+			}
+		});
+	}, [savedNetworks]);
+
 	return (
 		<Container>
 			<Wrapper layout>
-				{savedNetworks?.length > 0 && (
+				{filteredSavedNetworks?.length > 0 && (
 					<motion.div layout>
-						<Heading id="prefered-networks">Preferred networkd</Heading>
+						<Heading id="prefered-networks">Preferred networks</Heading>
 						<List aria-labelledby="prefered-networks">
 							<AnimatePresence>
-								{savedNetworks.map((network, i) => {
-									if (connected && connected.ssid === network.ssid) {
-										return;
-									}
-									return (
-										<NetworkItem
-											index={i}
-											key={network.ssid}
-											content={network}
-										/>
-									);
-								})}
+								{filteredSavedNetworks?.map((network, i) => (
+									<NetworkItem index={i} key={network.ssid} content={network} />
+								))}
 							</AnimatePresence>
 						</List>
 					</motion.div>
 				)}
-				{exampleWifis?.length > 0 && (
+				{filteredExampleWifis?.length > 0 && (
 					<motion.div layout>
 						<Heading id="networks">Networks</Heading>
 
 						<List aria-labelledby="networks">
 							{/* filter out matching networks savedNetworks child.ssid === exampleWifis child.ssid and map to components*/}
-							{exampleWifis.map((wifi, i) => {
+							{filteredExampleWifis.map((wifi, i) => {
 								const matchingNetwork = savedNetworks.find(
 									(network) => network.ssid === wifi.ssid
 								);
