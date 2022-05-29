@@ -4,33 +4,39 @@ import Functions from './Functions';
 
 const Global = createGlobalStyle`
     @font-face {
-		font-family: 'Gilroy-Bold';
+		font-family: 'Gilroy';
 		font-style: normal;
-		font-weight: normal;
-		src:  url('Gilroy-Bold.woff2') format('woff2'),
-			url('Gilroy-Bold.woff') format('woff');
+		font-weight: bold;
+		src:  url('fonts/Gilroy-Bold.woff2') format('woff2');
+			/* url('fonts/Gilroy-Bold.woff') format('woff'); */
     }
     
     @font-face {
-		font-family: 'Gilroy-Regular';
+		font-family: 'Gilroy';
 		font-style: normal;
 		font-weight: normal;
-		src:  url('Gilroy-Regular.woff2') format('woff2'),
-			url('Gilroy-Regular.woff') format('woff');
+		src:  url('fonts/Gilroy-Regular.woff2') format('woff2');
+			/* url('fonts/Gilroy-Regular.woff') format('woff'); */
 
     }
     @font-face {
-		font-family: 'Gilroy-Medium';
+		font-family: 'Gilroy';
 		font-style: normal;
-		font-weight: normal;
-		src:  url('Gilroy-Medium.woff2') format('woff2'),
-			url('Gilroy-Medium.woff') format('woff');
+		font-weight: medium;
+		src:  url('fonts/Gilroy-Medium.woff2') format('woff2');
+			/* url('fonts/Gilroy-Medium.woff') format('woff'); */
     }
 
 * {
 	box-sizing: border-box;
 	margin:0;
 	padding:0;
+	/* letter-spacing:1px; */
+}
+
+ul, li {
+	list-style: none;
+	margin-left: 0;
 }
 html {
 	overflow-x: hidden;
@@ -39,12 +45,14 @@ html {
 body {
 	background-color: var(--background);
 	color: var(--text);
-	font-family: 'Gilroy-Regular', Tahoma, Helvetica, Arial, Roboto, sans-serif;
+	font-family: 'Gilroy', Tahoma, Helvetica, Arial, Roboto, sans-serif;
 	font-size: 16px;
 	transition: color ${Colors.transition}s, background-color ${Colors.transition}s;
 	-webkit-font-smoothing: antialiased;
 	font-smooth: always;
 	-moz-osx-font-smoothing: auto;
+	text-rendering:optimizeLegibility;
+	
 }
 
 html,
@@ -102,18 +110,18 @@ button {
 :root {
 	--gridMargin: ${Variables.gridMarginMobile};
 	--gridGutter: ${Variables.gridGutterMobile};
-	--textModuleGap: 4rem;
-	--contentModuleGap: 12rem;
 
-	--background: ${Colors.offWhite};
-	--backgroundOff: ${Colors.grey};
-	--graphic: ${Colors.grey};
+	--background: ${Colors.white};
+
 	--text: ${Colors.darkBlue};
-	--contrast: ${Colors.darkBlue};
+	--contrast: ${Colors.contrast};
 	--contrastText: ${Colors.grey};
-	--harsh: ${Colors.white};
+	--grey: ${Colors.grey};
+
 	--border: ${Colors.darkGrey};
 	--dark: ${Colors.darkBlue};
+
+	--yellow: ${Colors.yellow};
 }
 
 ${Functions.breakpoint('mobile')} {

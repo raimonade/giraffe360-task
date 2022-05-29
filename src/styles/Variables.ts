@@ -5,8 +5,8 @@ export const Variables = {
 	gridColumns: 12,
 	gridMargin: '72px',
 	gridGutter: '24px',
-	gridMarginDesktop: '229px',
-	gridGutterDesktop: '24px',
+	gridMarginDesktop: '41px',
+	gridGutterDesktop: '30px',
 };
 
 export const Fonts = {

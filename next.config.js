@@ -9,6 +9,7 @@ const nextConfig = {
 	env: {
 		MODE: process.env.MODE,
 	},
+	optimizeFonts: false,
 };
 
 module.exports = withSvgr(nextConfig);
