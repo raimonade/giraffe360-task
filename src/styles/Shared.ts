@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 export const Page = styled(Wrapper)`
 	min-height: 100vh;
 	padding-bottom: 80px;
+
 	position: relative;
 `;
 

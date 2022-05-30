@@ -57,13 +57,13 @@ export const globalStyles = (
 				overflow-x: hidden;
 			}
 
-			html,
+			/* html,
 			body,
 			body > div:first-of-type,
 			div#__next,
 			div#__next > div {
 				height: 100%;
-			}
+			} */
 
 			a {
 				color: var(--text);
