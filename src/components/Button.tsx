@@ -27,6 +27,7 @@ export const ButtonWrapper = styled.button<{ buttonType: string }>`
 	/* width: 100%; */
 	transition: 0.2s all;
 	padding: 9px 22px 8px 22px;
+	color: var(--text);
 	/* min-width: 116px; */
 	/* white-space: nowrap; */
 
