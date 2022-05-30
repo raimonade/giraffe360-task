@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Functions from '@/styles/Functions';
 
 const Button = styled.button<{ orient: string }>`
 	/* width: 100%; */
@@ -13,8 +14,16 @@ const Button = styled.button<{ orient: string }>`
 
 	color: #ffc600;
 
-	align-self: ${(props) =>
-		props.orient === 'left' ? 'flex-start' : props.orient === 'center' ? 'center' : 'flex-end'};
+	align-self: center;
+
+	${Functions.breakpoint('mobile')} {
+		align-self: ${(props) =>
+			props.orient === 'left'
+				? 'flex-start'
+				: props.orient === 'center'
+				? 'center'
+				: 'flex-end'};
+	}
 `;
 
 const ClickableText = ({ onClick = null, text = '', orient = 'center' }) => {
