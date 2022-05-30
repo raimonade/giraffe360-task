@@ -26,7 +26,7 @@ const Switch = ({ className = '', onClick, isOn, size = 24 }) => {
 	return (
 		<motion.button
 			initial={false}
-			animate={{ backgroundColor: isOn ? Colors.yellow : Colors.grey }}
+			animate={{ backgroundColor: isOn ? Colors.yellow : Colors.darkGrey }}
 			className={className}
 			onClick={onClick}
 			onMouseDown={(e) => e.preventDefault()}
@@ -59,7 +59,7 @@ const Switch = ({ className = '', onClick, isOn, size = 24 }) => {
 				transition={{
 					type: 'spring',
 					stiffness: 450,
-					damping: 27,
+					damping: 30,
 				}}
 			/>
 		</motion.button>

@@ -54,6 +54,7 @@ export const globalStyles = (
 				font-smooth: always;
 				-moz-osx-font-smoothing: auto;
 				text-rendering: optimizeLegibility;
+				overflow-x: hidden;
 			}
 
 			html,

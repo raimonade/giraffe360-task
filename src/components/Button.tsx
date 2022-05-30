@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 
 export const ButtonWrapper = styled.button<{ buttonType: string }>`
 	/* height: 40px; */
+	-webkit-appearance: none;
+	-webkit-border-radius: none;
 	left: 62px;
 	--button-color: ${(props) =>
 		props.buttonType === 'hollow' ? 'var(--background)' : 'var(--yellow)'};
