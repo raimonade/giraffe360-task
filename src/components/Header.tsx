@@ -7,18 +7,6 @@ const Heading = styled.div`
 	width: 100%;
 	height: 60px;
 	background: var(--text);
-	/* ${Functions.breakpoint('mobile')} {
-		background: green;
-	}
-	${Functions.breakpoint('tablet')} {
-		background: green;
-	}
-	${Functions.breakpoint('laptop')} {
-		background: purple;
-	}
-	${Functions.breakpoint('desktop')} {
-		background: yellow;
-	} */
 `;
 
 const StyledLogo = styled(Logo)`
