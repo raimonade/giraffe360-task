@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import NetworkItem from './NetworkItem';
 import exampleWifis from '@/models/exampleWifis';
 import { usePersistentStore } from '@/store/persistentStore';
@@ -20,7 +20,7 @@ const Wrapper = styled(motion.div)`
 	}
 
 	> div {
-		&:not(:first-child) {
+		&:not(:first-of-type) {
 			margin-top: 40px;
 		}
 	}

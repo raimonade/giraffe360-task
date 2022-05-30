@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loader from '@/components/Loader';
 import SuccessIndicator from '@/components/SuccessIndicator';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
 
 const Container = styled(motion.div)`

@@ -1,7 +1,7 @@
 import WifiIcon from '@/components/WifiIcon';
 import { usePersistentStore } from '@/store/persistentStore';
 import Functions from '@/styles/Functions';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import KnownNetworkModal from './KnownNetworkModal';
 import { useModal } from './Modal';
 

@@ -1,6 +1,6 @@
 import Functions from '@/styles/Functions';
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import AddNetworkModal from './AddNetworkModal';
 import Button from './Button';
 import { useModal } from './Modal';

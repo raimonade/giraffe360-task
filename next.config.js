@@ -4,7 +4,7 @@ const withSvgr = require('@newhighsco/next-plugin-svgr');
 const nextConfig = {
 	reactStrictMode: true,
 	compiler: {
-		styledComponents: true,
+		emotion: true,
 	},
 	env: {
 		MODE: process.env.MODE,

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Colors } from './Variables';
 import Functions from '@/styles/Functions';
 

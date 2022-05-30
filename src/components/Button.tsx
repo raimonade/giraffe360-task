@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
 import { motion } from 'framer-motion';
 
@@ -69,7 +69,7 @@ const Container = styled(motion.div)<{ orient: string }>`
 			orient === 'right' ? 'flex-end' : orient === 'center' ? 'center' : 'flex-start'};
 	}
 	> button {
-		&:not(:first-child) {
+		&:not(:first-of-type) {
 			margin-left: 20px;
 		}
 	}

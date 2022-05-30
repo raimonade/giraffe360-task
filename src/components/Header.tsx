@@ -1,6 +1,6 @@
 import Functions from '@/styles/Functions';
 import React, { memo } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 
 const Heading = styled.div`

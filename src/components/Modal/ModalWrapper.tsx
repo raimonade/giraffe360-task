@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import ModalConsumer from './ModalContext';
 import Modal from './Modal';

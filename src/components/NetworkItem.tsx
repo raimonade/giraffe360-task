@@ -1,7 +1,7 @@
 import WifiIcon from '@/components/WifiIcon';
 import { usePersistentStore } from '@/store/persistentStore';
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import ConnectModal from './ConnectModal';
 import KnownNetworkModal from './KnownNetworkModal';
 import { useModal } from './Modal';

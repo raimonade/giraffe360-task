@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 import { useModal } from './ModalContext';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
 import { animated, config, Transition, useTransition } from 'react-spring';
 import { motion, AnimatePresence } from 'framer-motion';

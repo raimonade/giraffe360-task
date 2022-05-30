@@ -1,6 +1,6 @@
 import Functions from '@/styles/Functions';
 import React, { memo } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const Heading = styled.div`
 	width: 100%;

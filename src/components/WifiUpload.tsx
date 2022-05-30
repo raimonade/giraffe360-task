@@ -1,7 +1,7 @@
 import { usePersistentStore } from '@/store/persistentStore';
 import Functions from '@/styles/Functions';
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Toggle from './Toggle';
 
 const Upload = styled.div`

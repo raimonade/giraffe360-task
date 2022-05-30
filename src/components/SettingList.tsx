@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import WifiUpload from './WifiUpload';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import NetworkList from './NetworkList';
 import CurrentNetwork from './CurrentNetwork';
 import { usePersistentStore } from '@/store/persistentStore';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Variables, { Breakpoints, Index } from '@/styles/Variables';
 
 const Grid = styled.div<{ gridVisible: boolean; margin: string; gutter: string }>`
