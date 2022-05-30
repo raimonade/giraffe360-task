@@ -22,6 +22,7 @@ const Container = styled.div`
 
 const NewNetwork = () => {
 	const { showModal } = useModal();
+
 	const onNewNetwork = () => {
 		showModal(AddNetworkModal);
 	};

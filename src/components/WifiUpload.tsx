@@ -1,6 +1,6 @@
 import { usePersistentStore } from '@/store/persistentStore';
 import Functions from '@/styles/Functions';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Toggle from './Toggle';
 
@@ -44,12 +44,20 @@ const Container = styled.div`
 
 const WifiUpload = () => {
 	const { wifiUpload, setWifiUpload } = usePersistentStore();
+	const [status, setStatus] = useState(null);
+
+	useEffect(() => {
+		setStatus(wifiUpload);
+	}, [wifiUpload]);
+
 	return (
 		<Upload>
-			<Container>
-				<span>Wifi Upload</span>
-				<Toggle isOn={wifiUpload} onClick={() => setWifiUpload(!wifiUpload)} />
-			</Container>
+			{status === null ? null : (
+				<Container>
+					<span>Wifi Upload</span>
+					<Toggle isOn={status} onClick={() => setWifiUpload(!wifiUpload)} />
+				</Container>
+			)}
 		</Upload>
 	);
 };

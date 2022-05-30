@@ -24,12 +24,12 @@ const Btn = styled.button`
 const Home: NextPage = () => {
 	const [showChild, setShowChild] = useState(false);
 
-	useEffect(() => {
-		setShowChild(true);
-	}, []);
-	if (!showChild) {
-		return null;
-	}
+	// useEffect(() => {
+	// 	setShowChild(true);
+	// }, []);
+	// if (!showChild) {
+	// 	return null;
+	// }
 	return (
 		<Page>
 			<Header />

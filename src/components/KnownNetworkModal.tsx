@@ -50,6 +50,7 @@ const KnownNetworkModal = (props) => {
 			</ButtonContainer> */}
 			<AnimatePresence>
 				<ModalTitle
+					key={props?.network?.ssid}
 					title={
 						step === 'overview'
 							? props?.network?.ssid

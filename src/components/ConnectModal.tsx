@@ -8,7 +8,6 @@ import { useModal } from './Modal';
 import { ModalTitle } from './Modal/Modal';
 
 const ConnectModal = (props) => {
-	console.log('props', props);
 	const { hideModal } = useModal();
 	const { addSavedNetwork, connect } = usePersistentStore();
 	const { submit, clearError, error, submitting, success, feedback } = useSubmit({

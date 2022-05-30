@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import WifiUpload from './WifiUpload';
 import styled from 'styled-components';
 import NetworkList from './NetworkList';
@@ -14,10 +14,15 @@ const Settings = styled.div`
 
 const SettingList = () => {
 	const { wifiUpload } = usePersistentStore();
+	const [loaded, setLoaded] = useState(false);
+	useEffect(() => {
+		setLoaded(true);
+	}, []);
+
 	return (
 		<Settings>
 			<WifiUpload />
-			{wifiUpload ? (
+			{wifiUpload && loaded ? (
 				<>
 					<CurrentNetwork />
 					<NetworkList />

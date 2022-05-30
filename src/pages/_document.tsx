@@ -9,7 +9,7 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+	static async getInitialProps(ctx) {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
 
@@ -22,13 +22,7 @@ export default class MyDocument extends Document {
 			const initialProps = await Document.getInitialProps(ctx);
 			return {
 				...initialProps,
-				// @ts-ignore
-				styles: (
-					<>
-						{initialProps.styles}
-						{sheet.getStyleElement()}
-					</>
-				),
+				styles: [initialProps.styles, sheet.getStyleElement()],
 			};
 		} finally {
 			sheet.seal();

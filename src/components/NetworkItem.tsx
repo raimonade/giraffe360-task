@@ -27,7 +27,6 @@ const NetworkItem = ({ content, index = 1 }) => {
 
 	const onClick = () => {
 		const matching = savedNetworks.find((network) => network.ssid === content.ssid);
-		console.log(matching);
 		if (matching) {
 			showModal(KnownNetworkModal, { network: content });
 			return;
@@ -52,7 +51,7 @@ const NetworkItem = ({ content, index = 1 }) => {
 			transition={{
 				delay: index * 0.1 + Math.random(),
 			}}
-			positionTransition={{ duration: 0.2 }}
+			// positionTransition={{ duration: 0.2 }}
 		>
 			<WifiIcon bars={content.strength} />
 			<span>{content.ssid}</span>

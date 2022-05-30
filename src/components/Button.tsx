@@ -77,7 +77,7 @@ const Container = styled(motion.div)<{ orient: string }>`
 
 export const ButtonContainer = ({ orientation = 'right', children = null }) => {
 	return (
-		<Container layout transition={{ duration: 0.2 }} orient={orientation}>
+		<Container key={orientation} layout transition={{ duration: 0.2 }} orient={orientation}>
 			{children}
 		</Container>
 	);
