@@ -1,5 +1,5 @@
 import Functions from '@/styles/Functions';
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '@/assets/logo.svg';
 
@@ -35,4 +35,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default memo(Header);

@@ -4,7 +4,6 @@ import { Page } from '@/styles/Shared';
 import WifiSetupHeading from '@/components/WifiSetupHeading';
 import Toggle from '@/components/Toggle';
 
-import styled from 'styled-components';
 import SettingList from '@/components/SettingList';
 
 const Home: NextPage = () => {

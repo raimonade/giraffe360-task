@@ -1,5 +1,5 @@
 import Functions from '@/styles/Functions';
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.div`
@@ -32,11 +32,13 @@ const HeadingContainer = styled.div`
 	font-family: 'Gilroy';
 	padding: 30px;
 	text-align: center;
+
 	${Functions.breakpoint('mobile')} {
 		padding: 0;
 		justify-content: flex-start;
 		text-align: left;
 	}
+
 	${Functions.breakpoint('laptop')} {
 		margin: 0;
 		width: ${Functions.col(6, 12)};
@@ -79,4 +81,4 @@ const WifiSetupHeading = () => {
 	);
 };
 
-export default WifiSetupHeading;
+export default memo(WifiSetupHeading);
