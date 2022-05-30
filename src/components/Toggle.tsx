@@ -22,7 +22,7 @@ const Text = styled(motion.div)<{ x: number }>`
 	font-size: 10px;
 `;
 
-const Switch = ({ className, onClick, isOn, size = 24 }) => {
+const Switch = ({ className = '', onClick, isOn, size = 24 }) => {
 	return (
 		<motion.button
 			initial={false}
@@ -67,7 +67,7 @@ const Switch = ({ className, onClick, isOn, size = 24 }) => {
 };
 
 export default styled(Switch)<Props>(
-	({ theme, size = 24, isOn = false }) => css`
+	({ theme, size = 24, className, isOn = false }) => css`
 		position: relative;
 		width: ${size * 2.75}px;
 		height: ${size}px;
