@@ -42,7 +42,8 @@ export const globalStyles = (
 			}
 			html {
 				overflow-x: hidden;
-				overflow-y: scroll;
+				/* overflow-y: scroll; */
+				height: 100%;
 			}
 			body {
 				background-color: var(--background);
@@ -55,15 +56,18 @@ export const globalStyles = (
 				-moz-osx-font-smoothing: auto;
 				text-rendering: optimizeLegibility;
 				overflow-x: hidden;
+				overflow-y: scroll;
 			}
 
-			/* html,
-			body,
-			body > div:first-of-type,
-			div#__next,
-			div#__next > div {
+			html,
+			/* body, */
+			/* body > div:first-child, */
+			div#__next, {
+				/* div#__next > div { */
+				position: relative;
 				height: 100%;
-			} */
+				/* height: auto; */
+			}
 
 			a {
 				color: var(--text);

@@ -8,13 +8,16 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
+	> div {
+		flex-shrink: 0;
+	}
 `;
 
 export const Page = styled(Wrapper)`
 	min-height: 100vh;
-	padding-bottom: 80px;
-
 	position: relative;
+	display: flex;
+	padding-bottom: 80px;
 `;
 
 export const PageContent = styled.div`

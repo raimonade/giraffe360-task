@@ -3,6 +3,7 @@ import React, { memo } from 'react';
 import styled from '@emotion/styled';
 
 const Heading = styled.div`
+	display: flex;
 	width: 100%;
 	/* height: 60px; */
 	min-height: 100px;
@@ -27,8 +28,11 @@ const HeadingContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	margin: auto;
-	display: grid;
-	place-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 	font-family: 'Gilroy';
 	padding: 30px;
 	text-align: center;
@@ -36,6 +40,7 @@ const HeadingContainer = styled.div`
 	${Functions.breakpoint('mobile')} {
 		padding: 0;
 		justify-content: flex-start;
+		align-items: flex-start;
 		text-align: left;
 	}
 
