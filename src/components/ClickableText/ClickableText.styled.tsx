@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
 
-const Button = styled.button<{ orient: string }>`
+export const Button = styled.button<{ orient: string }>`
 	/* width: 100%; */
 	font-weight: bold;
 	font-size: 14px;
@@ -25,13 +24,3 @@ const Button = styled.button<{ orient: string }>`
 				: 'flex-end'};
 	}
 `;
-
-const ClickableText = ({ onClick = null, text = '', orient = 'center' }) => {
-	return (
-		<Button orient={orient} onClick={onClick}>
-			{text}
-		</Button>
-	);
-};
-
-export default ClickableText;

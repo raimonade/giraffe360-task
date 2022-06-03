@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
 import { motion } from 'framer-motion';
@@ -48,17 +47,7 @@ export const ButtonWrapper = styled.button<{ buttonType: string }>`
 	}
 `;
 
-const Button = ({ buttonType = 'hollow', onClick = null, text, disabled = false }) => {
-	return (
-		<ButtonWrapper onClick={onClick} buttonType={buttonType} disabled={disabled}>
-			{text}
-		</ButtonWrapper>
-	);
-};
-
-export default Button;
-
-const Container = styled(motion.div)<{ orient: string }>`
+export const Container = styled(motion.div)<{ orient: string }>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -77,11 +66,3 @@ const Container = styled(motion.div)<{ orient: string }>`
 		}
 	}
 `;
-
-export const ButtonContainer = ({ orientation = 'right', children = null }) => {
-	return (
-		<Container key={orientation} layout transition={{ duration: 0.2 }} orient={orientation}>
-			{children}
-		</Container>
-	);
-};

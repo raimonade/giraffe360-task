@@ -1,8 +1,8 @@
 import React, { useContext, createContext } from 'react';
 
 const ModalContext = createContext({
-	hideModal: null,
-	showModal: null,
+	hideModal: () => {},
+	showModal: (component, props?) => {},
 	props: null,
 	component: null,
 });

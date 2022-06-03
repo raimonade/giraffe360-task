@@ -4,13 +4,6 @@ import { css } from '@emotion/react';
 import { motion } from 'framer-motion';
 import { Colors } from '@/styles/Variables';
 
-type Props = {
-	isOn: boolean;
-	onClick: () => void;
-	className?: string;
-	size?: number;
-};
-
 const Text = styled(motion.div)<{ x: number }>`
 	position: absolute;
 	/* top: calc(50% + 1px); */
@@ -22,7 +15,14 @@ const Text = styled(motion.div)<{ x: number }>`
 	font-size: 10px;
 `;
 
-const Switch = ({ className = '', onClick, isOn, size = 24 }) => {
+interface ISwitchProps {
+	className?: string;
+	isOn: boolean;
+	size?: number;
+	onClick?: () => void;
+}
+
+const Switch = ({ className = '', onClick, isOn, size = 24 }: ISwitchProps) => {
 	return (
 		<motion.button
 			initial={false}
@@ -66,7 +66,7 @@ const Switch = ({ className = '', onClick, isOn, size = 24 }) => {
 	);
 };
 
-export default styled(Switch)<Props>(
+export default styled(Switch)(
 	({ theme, size = 24, className, isOn = false }) => css`
 		position: relative;
 		width: ${size * 2.75}px;

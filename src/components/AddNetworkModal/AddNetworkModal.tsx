@@ -1,11 +1,11 @@
 import { usePersistentStore } from '@/store/persistentStore';
 import React, { useState } from 'react';
-import Button, { ButtonContainer } from './Button';
-import Input from './Input';
-import { useModal } from './Modal';
-import { ModalTitle } from './Modal/Modal';
+import Button, { ButtonContainer } from '@/components/Button';
+import Input from '@/components/Input';
+import { useModal } from '@/components/Modal';
+import { ModalTitle } from '@/components/Modal/Modal';
 
-const AddNetworkModal = (props) => {
+const AddNetworkModal = (props: any) => {
 	const [ssid, setSsid] = useState('');
 	const [password, setPassword] = useState('');
 	const { addSavedNetwork } = usePersistentStore();

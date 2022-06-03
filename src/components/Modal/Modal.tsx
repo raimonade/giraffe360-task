@@ -1,8 +1,6 @@
-import React, { memo, useState } from 'react';
-import { useModal } from './ModalContext';
+import React, { memo, ReactNode } from 'react';
 import styled from '@emotion/styled';
 import Functions from '@/styles/Functions';
-import { animated, config, Transition, useTransition } from 'react-spring';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ModalBody = styled(motion.div)`
@@ -47,7 +45,7 @@ const Wrapper = styled(motion.div)`
 	}
 `;
 
-const Modal = ({ children, ...props }) => {
+const Modal = ({ children, ...props }: { children: ReactNode; [x: string]: any }) => {
 	return (
 		<ModalBody {...props}>
 			<AnimatePresence>
@@ -110,7 +108,13 @@ const ModalHeader = styled.div<{ orient: string }>`
 	}
 `;
 
-export const Title = ({ title = '', subtitle = '', orient = 'left' }) => {
+export interface ITitle {
+	title: string;
+	subtitle?: string;
+	orient?: string;
+}
+
+export const Title = ({ title = '', subtitle = '', orient = 'left' }: ITitle) => {
 	return (
 		<ModalHeader orient={orient}>
 			{subtitle && <span>{subtitle}</span>}

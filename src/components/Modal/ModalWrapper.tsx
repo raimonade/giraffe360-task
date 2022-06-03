@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { ComponentType, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { AnimatePresence, motion } from 'framer-motion';
 import ModalConsumer from './ModalContext';
@@ -37,7 +37,13 @@ const ModalWrapper = () => {
 	);
 };
 
-const ModalContainer = ({ Component, props, hideModal }) => {
+interface IModalContainer {
+	Component: ComponentType<any> | null;
+	props: any;
+	hideModal: () => void;
+}
+
+const ModalContainer = ({ Component, props, hideModal }: IModalContainer) => {
 	return (
 		<AnimatePresence>
 			{Component && (

@@ -9,12 +9,6 @@ export const Variables = {
 	gridGutterDesktop: '30px',
 };
 
-export const Fonts = {
-	defaultFamily: `'Gilroy-Regular', Tahoma, Helvetica, Arial, Roboto, sans-serif`,
-	boldFamily: `'Gilroy-Bold', Tahoma, Helvetica, Arial, Roboto, sans-serif`,
-	defaultSize: '16px',
-};
-
 export const Index = {
 	filter: 20,
 	topMenu: 25,

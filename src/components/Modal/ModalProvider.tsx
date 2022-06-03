@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import ModalContext from './ModalContext';
 
-const ModalProvider = ({ children }) => {
+const ModalProvider = ({ children }: { children: ReactNode }) => {
 	const [state, setState] = useState({ component: null, props: null });
 
 	function showModal(component, props = {}) {

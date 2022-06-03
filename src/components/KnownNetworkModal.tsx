@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import Button, { ButtonContainer } from '@/components/Button';
 import ClickableText from '@/components/ClickableText';
-import Input from '@/components/Input';
 import { useModal } from '@/components/Modal';
 import { ModalTitle } from '@/components/Modal/Modal';
 import { AnimatePresence } from 'framer-motion';
 import { usePersistentStore } from '@/store/persistentStore';
-import { connect } from 'http2';
 import { useSubmit } from '@/hooks/useSubmit';
 
-const KnownNetworkModal = (props) => {
+const KnownNetworkModal = (props: any) => {
 	const { hideModal } = useModal();
 	// overview, forget, disconnect
 	const { removeSavedNetwork, connected, disconnect, connect } = usePersistentStore();

@@ -1,10 +1,7 @@
-import { usePersistentStore } from '@/store/persistentStore';
 import Functions from '@/styles/Functions';
-import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import Toggle from './Toggle';
 
-const Upload = styled.div`
+export const Upload = styled.div`
 	height: 90px;
 	width: 100%;
 	border-bottom: 1px solid var(--border);
@@ -13,7 +10,7 @@ const Upload = styled.div`
 		width: calc(100% - var(--gridMargin) * 2);
 	} */
 `;
-const Container = styled.div`
+export const Container = styled.div`
 	/* margin: auto; */
 	height: 90px;
 	/* width: calc(100% - var(--gridMargin) * 2); */
@@ -41,25 +38,3 @@ const Container = styled.div`
 		width: ${Functions.colFixed(6)};
 	}
 `;
-
-const WifiUpload = () => {
-	const { wifiUpload, setWifiUpload } = usePersistentStore();
-	const [status, setStatus] = useState(null);
-
-	useEffect(() => {
-		setStatus(wifiUpload);
-	}, [wifiUpload]);
-
-	return (
-		<Upload>
-			{status === null ? null : (
-				<Container>
-					<span>Wifi Upload</span>
-					<Toggle isOn={status} onClick={() => setWifiUpload(!wifiUpload)} />
-				</Container>
-			)}
-		</Upload>
-	);
-};
-
-export default WifiUpload;

@@ -1,13 +1,12 @@
-import { simulatePost, useSubmit } from '@/hooks/useSubmit';
+import { useSubmit } from '@/hooks/useSubmit';
 import { usePersistentStore } from '@/store/persistentStore';
-import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import Button, { ButtonContainer } from './Button';
-import Input from './Input';
-import { useModal } from './Modal';
-import { ModalTitle } from './Modal/Modal';
+import Button, { ButtonContainer } from '@/components/Button';
+import Input from '@/components/Input';
+import { useModal } from '@/components/Modal';
+import { ModalTitle } from '@/components/Modal/Modal';
 
-const ConnectModal = (props) => {
+const ConnectModal = (props: any) => {
 	const { hideModal } = useModal();
 	const { addSavedNetwork, connect } = usePersistentStore();
 	const { submit, clearError, error, submitting, success, feedback } = useSubmit({

@@ -1,27 +1,17 @@
 import WifiIcon from '@/components/WifiIcon';
 import { usePersistentStore } from '@/store/persistentStore';
-import { motion } from 'framer-motion';
-import styled from '@emotion/styled';
-import ConnectModal from './ConnectModal';
-import KnownNetworkModal from './KnownNetworkModal';
-import { useModal } from './Modal';
+import ConnectModal from '@/components/ConnectModal';
+import KnownNetworkModal from '@/components/KnownNetworkModal';
+import { useModal } from '@/components/Modal';
+import { Wifi } from '@/models/wifi';
+import { Item } from './NetworkItem.styled';
 
-const Item = styled(motion.li)`
-	display: flex;
-	height: 50px;
-	width: 100%;
-	align-items: center;
-	cursor: pointer;
+export interface INetworkItem {
+	content: Wifi;
+	index?: number;
+}
 
-	span {
-		font-weight: bold;
-		font-size: 16px;
-		/* line-height: 25px; */
-		margin-left: 15px;
-	}
-`;
-
-const NetworkItem = ({ content, index = 1 }) => {
+const NetworkItem = ({ content, index = 1 }: INetworkItem) => {
 	const { showModal } = useModal();
 	const { savedNetworks } = usePersistentStore();
 

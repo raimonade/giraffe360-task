@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
 
-const TextInput = styled.input`
+export const TextInput = styled.input`
 	width: 100%;
 	height: 50px;
 	background: var(--white);
@@ -12,7 +11,7 @@ const TextInput = styled.input`
 	padding: 0 20px;
 `;
 
-const Text = styled.span`
+export const Text = styled.span`
 	font-family: 'Gilroy';
 	font-weight: bold;
 	font-size: 18px;
@@ -22,19 +21,8 @@ const Text = styled.span`
 	display: block;
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 `;
-
-const Input = ({ label = '', value, onChange, inputType = 'text' }) => {
-	return (
-		<Label>
-			<Text>{label}</Text>
-			<TextInput type={inputType} value={value} onChange={(e) => onChange(e.target.value)} />
-		</Label>
-	);
-};
-
-export default Input;

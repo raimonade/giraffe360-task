@@ -1,8 +1,7 @@
 import Functions from '@/styles/Functions';
-import React, { memo } from 'react';
 import styled from '@emotion/styled';
 
-const Heading = styled.div`
+export const Heading = styled.div`
 	display: flex;
 	width: 100%;
 	/* height: 60px; */
@@ -14,7 +13,7 @@ const Heading = styled.div`
 	}
 `;
 
-const HeadingWrapper = styled.div`
+export const HeadingWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -24,7 +23,7 @@ const HeadingWrapper = styled.div`
 	height: 100%;
 `;
 
-const HeadingContainer = styled.div`
+export const HeadingContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	margin: auto;
@@ -50,14 +49,14 @@ const HeadingContainer = styled.div`
 	}
 `;
 
-const Heading1 = styled.h1`
+export const Heading1 = styled.h1`
 	font-size: 24px;
 
 	${Functions.breakpoint('desktop')} {
 		font-size: 30px;
 	}
 `;
-const Heading2 = styled.h2`
+export const Heading2 = styled.h2`
 	font-size: 10px;
 	color: var(--contrast);
 	line-height: 25px;
@@ -70,20 +69,3 @@ const Heading2 = styled.h2`
 		color: var(--text);
 	}
 `;
-
-const WifiSetupHeading = () => {
-	return (
-		<Heading>
-			<HeadingWrapper>
-				<HeadingContainer>
-					<Heading1>Wi-Fi setup</Heading1>
-					<Heading2>
-						Camera ID: <span>00123P1</span>
-					</Heading2>
-				</HeadingContainer>
-			</HeadingWrapper>
-		</Heading>
-	);
-};
-
-export default memo(WifiSetupHeading);

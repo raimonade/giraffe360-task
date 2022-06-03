@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Loader from '@/components/Loader';
@@ -29,7 +29,7 @@ const ErrorText = styled(motion.span)`
 	}
 `;
 
-export const simulatePost = (handler, delay = 2000) => {
+export const simulatePost = (handler: any, delay = 2000) => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve(handler);
@@ -37,7 +37,7 @@ export const simulatePost = (handler, delay = 2000) => {
 	});
 };
 
-export const useSubmit = ({ onSubmit = null }) => {
+export const useSubmit = ({ onSubmit }: { onSubmit?: any }) => {
 	const [state, setState] = useState({
 		submitting: false,
 		success: false,
@@ -51,7 +51,7 @@ export const useSubmit = ({ onSubmit = null }) => {
 			setState({ ...state, error: null, success: false });
 		},
 
-		submit: async (func) => {
+		submit: async (func: any) => {
 			if (state.submitting) {
 				return;
 			}
@@ -70,7 +70,9 @@ export const useSubmit = ({ onSubmit = null }) => {
 					success: true,
 				});
 				setTimeout(() => {
-					onSubmit();
+					if (onSubmit && typeof onSubmit === 'function') {
+						onSubmit();
+					}
 				}, 800);
 				setTimeout(() => {
 					// clear success state
@@ -115,7 +117,7 @@ export const useSubmit = ({ onSubmit = null }) => {
 	};
 };
 
-function Fade({ children }) {
+function Fade({ children }: { children: ReactNode }) {
 	return (
 		<motion.span
 			initial={{ opacity: 0, y: 30 }}
@@ -130,7 +132,7 @@ function Fade({ children }) {
 	);
 }
 
-function Bounce({ children }) {
+function Bounce({ children }: { children: ReactNode }) {
 	return (
 		<motion.span
 			initial={{ opacity: 0, scale: 0 }}
